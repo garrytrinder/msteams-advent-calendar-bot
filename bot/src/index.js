@@ -2,6 +2,10 @@ const notificationTemplate = require("./adaptiveCards/notification-default.json"
 const { bot } = require("./internal/initialize");
 const { AdaptiveCards } = require("@microsoft/adaptivecards-tools");
 const restify = require("restify");
+const path = require("path");
+const { AdventCalendarBotActivityHandler } = require('./internal/activityHandler')
+
+const activityHandler = new AdventCalendarBotActivityHandler();
 
 // Create HTTP server.
 const server = restify.createServer();
@@ -27,5 +31,13 @@ server.post(
 
 // Bot Framework message handler.
 server.post("/api/messages", async (req, res) => {
-  await bot.requestHandler(req, res);
+  await bot.adapter.process(req, res, (context) => activityHandler.run(context))
 });
+
+// Serve static files.
+server.get(
+  '/*.html',
+  restify.plugins.serveStatic({
+    directory: path.join(__dirname, 'public')
+  })
+)

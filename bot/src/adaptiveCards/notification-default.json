@@ -18,7 +18,12 @@
       "actions": [
         {
           "type": "Action.Submit",
-          "title": "Open"
+          "title": "Open",
+          "data": {
+            "msteams": {
+              "type": "task/fetch"
+            }
+          }
         }
       ]
     }

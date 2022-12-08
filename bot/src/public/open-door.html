@@ -23,9 +23,17 @@
 </head>
 <body>
   <div id="embed-container">
-    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/E8gmARGvPlI?rel=0" title="YouTube video player"
+    <iframe id="video" width="560" height="315" title="YouTube video player"
       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen></iframe>
   </div>
+  <script>
+    // Get the URL parameters
+    const url = new URL(document.URL).searchParams.get('url');
+
+    // Set the video source
+    const video = document.getElementById('video');
+    video.src = `${url}?rel=0`;
+  </script>
 </body>
 </html>

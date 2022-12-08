@@ -20,8 +20,16 @@ server.post(
   restify.plugins.bodyParser(), // Add more parsers if needed
   async (req, res) => {
     for (const target of await bot.notification.installations()) {
+      const day = req.query.day;
+      if (!day) {
+        res.status(400);
+        res.json({ error: "'day' query param is required" });
+        return;
+      }
       await target.sendAdaptiveCard(
-        AdaptiveCards.declare(notificationTemplate).render()
+        AdaptiveCards.declare(notificationTemplate).render({
+          day: req.query.day,
+        })
       );
     }
 

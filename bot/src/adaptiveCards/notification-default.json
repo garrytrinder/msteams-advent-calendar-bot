@@ -22,6 +22,9 @@
           "data": {
             "msteams": {
               "type": "task/fetch"
+            },
+            "data": {
+              "day": "${day}"
             }
           }
         }

@@ -4,7 +4,7 @@ class AdventCalendarBotActivityHandler extends TeamsActivityHandler {
 
   handleTeamsTaskModuleFetch(context, taskModuleRequest) {
     const taskInfo = {
-      url: 'https://c82e-86-166-248-5.ngrok.io/open-door.html',
+      url: `${process.env.SITE_ENDPOINT}/open-door.html`,
       height: 'large',
       width: 'large',
       title: 'Door'

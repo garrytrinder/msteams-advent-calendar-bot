@@ -12,6 +12,7 @@
                 "Start local tunnel",
                 "Set up bot",
                 "Build & upload Teams manifest",
+                "Write state to env",
                 "Start services"
             ],
             "dependsOrder": "sequence"
@@ -93,6 +94,15 @@
             "dependsOn": [
                 "Start bot"
             ]
+        },
+        {
+            "label": "Write state to env",
+            "type": "shell",
+            "command": "node scripts/statetoenv.js",
+            "isBackground": true,
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
         },
         {
             "label": "Start bot",

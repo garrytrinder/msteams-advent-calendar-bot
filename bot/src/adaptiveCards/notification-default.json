@@ -1,0 +1,26 @@
+{
+  "type": "AdaptiveCard",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.4",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "🎄 🎁 🎅",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "It's time to open today's door!",
+      "wrap": true
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "Open"
+        }
+      ]
+    }
+  ]
+}

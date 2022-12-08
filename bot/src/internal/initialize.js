@@ -1,4 +1,5 @@
 const { ConversationBot } = require("@microsoft/teamsfx");
+const { CalendarCommandHandler } = require("../commands/calendar");
 const config = require("./config");
 
 // Create bot.
@@ -13,6 +14,10 @@ const bot = new ConversationBot({
   notification: {
     enabled: true,
   },
+  command: {
+    enabled: true,
+    commands: [new CalendarCommandHandler()]
+  }
 });
 
 module.exports = {

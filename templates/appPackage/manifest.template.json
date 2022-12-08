@@ -27,12 +27,23 @@
         {
             "botId": "{{state.fx-resource-bot.botId}}",
             "scopes": [
-                "personal",
-                "team",
-                "groupchat"
+                "personal"
             ],
             "supportsFiles": false,
-            "isNotificationOnly": false
+            "isNotificationOnly": false,
+            "commandLists": [
+                {
+                    "scopes": [
+                        "personal"
+                    ],
+                    "commands": [
+                        {
+                            "title": "calendar",
+                            "description": "View the advent calendar"
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "composeExtensions": [],

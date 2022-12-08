@@ -7,7 +7,7 @@ class AdventCalendarBotActivityHandler extends TeamsActivityHandler {
       url: `${process.env.SITE_ENDPOINT}/open-door.html`,
       height: 'large',
       width: 'large',
-      title: 'Door'
+      title: 'Wham! - Last Christmas'
     }
 
     return {

@@ -5,8 +5,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Open Door</title>
+  <style type="text/css">
+    #embed-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 95%;
+      height: 95%;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-style: none;
+    }
+
+  </style>
 </head>
 <body>
-  This is a dialog window that will open when the user clicks the button.
+  <div id="embed-container">
+    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/E8gmARGvPlI?rel=0" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
 </body>
 </html>

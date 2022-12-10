@@ -20,4 +20,4 @@ https://user-images.githubusercontent.com/11563347/206854077-14a30d19-833b-49b0-
 
 A recording was published on the 10th December 2022 as part of the Festive Tech Calendar which provides the steps of how to build this sample project from scratch.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bHIuWlGdLYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Video](https://img.youtube.com/vi/bHIuWlGdLYQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=bHIuWlGdLYQ)
